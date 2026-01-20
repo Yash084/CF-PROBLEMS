@@ -39,6 +39,8 @@ void solve()
 	vector<int> basePrime = sieve (ceil(sqrt(b)) + 1);
 	// create solution array with 0 as a, 1 as a+1 ....... b-a+1 as b
 	vector<int> primes(b-a+1, 1);
+	if(a==1)
+		primes[0]=0;
 	for(int i=0; i<basePrime.size(); i++)
 	{
 		if(basePrime[i] == 1)
